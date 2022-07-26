@@ -36,6 +36,9 @@ circularBtn.addEventListener('click', (e)=>{
         }
     }else{
         circularBtn.classList.remove('_active');
+        circularItems.forEach(item=>{
+            item.classList.remove('_active');
+        })
         for(let i=0;i<size;i++){
             circularItems[i].removeAttribute('style');
         }
