@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo"><span>Serzh</span>Konserzh</div>
+            <nav class="header__nav nav-header">
+                <div class="nav-header__icon">
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-header__list">
+                    <li class="nav-header__item"><a href="#" class="nav-header__link _active">Home</a></li>
+                    <li class="nav-header__item"><a href="#about" class="nav-header__link">About</a></li>
+                    <li class="nav-header__item"><a href="#skills" class="nav-header__link">Skills</a></li>
+                    <li class="nav-header__item"><a href="#projects" class="nav-header__link">Projects</a></li>
+                    <li class="nav-header__item"><a href="#contacts" class="nav-header__link">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="home">
+        <div class="container home__container">
+            <div class="home__content">
+                <div class="home__text-block text-block">
+                    <h1 class="text-block__title"><span>Hi,</span> I Am Serzh</h1>
+                    <div class="text-block__profession">Frontend developer</div>
+                    <div class="text-block__info">I am 20 years old guy from Belarus, who likes programming and sleeping. But don't panic, i have already slept a little, so let me introduce myself.</div>
+                </div>
+                <a href="#contacts" class="text-block__btn">Contact</a>
+            </div>
+            <div class="home__photo">
+                <img src="img/my-photo.jpg" alt="It's me">
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__text-block text-block">
+                <h2 class="text-block__title">About <span>Me</span></h2>
+                <div class="text-block__info">Below there is a brief information about me.</div>
+                <div class="separator"></div>
+            </div>
+            <div class="about__cards cards-about">
+                <div class="cards-about__item">
+                    <div class="cards-about__title">Education</div>
+                    <div class="cards-about__img">
+                        <img src="img/education-icon.png" alt="Education">
+                    </div>
+                    <div class="cards-about__text">I am 4th year student at Belarusian State University of Informatics and Radioelectronics. I am studying at the Faculty of Computer Systems and Networks. My English level is B1.</div>
+                </div>
+                <div class="cards-about__item">
+                    <div class="cards-about__title">Qualities</div>
+                    <div class="cards-about__img">
+                        <img src="img/personal-icon.png" alt="Personal qualities">
+                    </div>
+                    <div class="cards-about__text">I take a responsible approach to my tasks and always do my best to meet deadlines. In addition,thanks to studying at the university, i have good teamwork skill. What is more, if i don't know how to do something, i'll do everything possible to find necessary information and use it to create solution. </div>
+                </div>
+                <div class="cards-about__item">
+                    <div class="cards-about__title">Random facts</div>
+                    <div class="cards-about__img">
+                        <img src="img/other-icon.png" alt="Other skills">
+                    </div>
+                    <div class="cards-about__text">Have category B driver's license.<br>Think that the worst creature in the world is spider.<br>Like doing sports<br>Find inspiration in people(and food, food always is good) </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="container skills__container">
+            <h2 class="skills__title text-block__title"><span>Languages</span> And <span>Frameworks</span> I Know</h2>
+            <div class="separator"></div>
+            <ul class="skills__list list-skills">
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #f06529">HTML</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Upper-Intermediate</span></h2>
+                        <div class="text-block__info">I studied HTML and CSS on Udemy courses. I know how to do semantic and adaptive layout. Also i know how to use BEM metodology.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #379ad6">CSS</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Upper-Intermediate</span></h2>
+                        <div class="text-block__info">I studied HTML and CSS on Udemy courses. I have knowledge in responsive design. I know how to work with Flex and Grid. Also i understand how to use pseudoelements.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #cc6699">SASS</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Intermediate</span></h2>
+                        <div class="text-block__info">I have used SASS in different projects. I know how to use variables and mixins.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #f7df1e">JavaScript</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Intermediate</span></h2>
+                        <div class="text-block__info">I studied JavaScript on Udemy courses. I know basics of this language and basic algorithms. Also i know how to interact with DOM. Now i am studying advanced JavaScript(AJAX, JSON, etc.) </div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #6f42c1">Bootstrap</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Beginner</span></h2>
+                        <div class="text-block__info">I khow the basics of Bootstrap, but i don't have enough practice. I have used it in one project.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #5ed9fb">React</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Beginner</span></h2>
+                        <div class="text-block__info">I only start learning React and didn't use it.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #83cd29">NodeJS</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Beginner</span></h2>
+                        <div class="text-block__info">I have solved some algorithms tasks using NodeJS, so that i know how it works.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #dc3545">Gulp</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Beginner</span></h2>
+                        <div class="text-block__info">I didn't have enough practice with gulp(one project), but i know how to use it on a beginner level.</div>
+                    </div>
+                </li>
+                <li class="list-skills__item">
+                    <div class="list-skills__card" style="--bg: #151515">Git</div>
+                    <div class="list-skills__block text-block">
+                        <h2 class="text-block__title skills-text-block__title">Level: <span>Intermediate</span></h2>
+                        <div class="text-block__info">I know how to create and clone repositories. Also i understand how to do commits and pull requests. What is more, i have practice in working with Git through console.</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container projects__container">
+            <div class="projects__text-block text-block">
+                <h2 class="text-block__title">Project<span>s</span></h2>
+                <div class="text-block__info">Below there is a list of my projects.</div>
+                <div class="separator"></div>
+            </div>
+            <ul class="projects__cards cards-projects">
+                <li class="cards-projects__item">
+                    <img src="img/projects/covid.png" alt="Covid Site">
+                    <a href="https://serzhkonserzh.github.io/projects/corona" class="cards-projects__info">
+                        <h2 class="cards-projects__name">GoCorona</h2>
+                        <div class="cards-projects__tags">#CSS, #JavaScript</div>
+                    </a>
+                </li>
+                <li class="cards-projects__item">
+                    <img src="img/projects/uber.png" alt="Uber Site">
+                    <a href="https://serzhkonserzh.github.io/projects/uber" class="cards-projects__info">
+                        <h2 class="cards-projects__name">Uber</h2>
+                        <div class="cards-projects__tags">#SASS, #Bootstrap, #JavaScript</div>
+                    </a>
+                </li>
+                <li class="cards-projects__item">
+                    <img src="img/projects/pc.png" alt="PC Site">
+                    <a href="https://serzhkonserzh.github.io/projects/pc" class="cards-projects__info">
+                        <h2 class="cards-projects__name">PC</h2>
+                        <div class="cards-projects__tags">#SASS</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="container contacts__container">
+            <div class="contacts__text-block text-block">
+                <h2 class="text-block__title">Contact<span>s</span></h2>
+                <div class="separator"></div>
+            </div>
+        </div>
+        <div class="contacts__content">
+            <ul class="contacts__info">
+                <div class="circular-menu contacts__circular-menu">
+                    <a href="https://github.com/SerzhKonserzh" class="circular-menu__item">GitHub</a>
+                    <div class="circular-menu__item">
+                        <div class="circular-menu__name">Gmail</div>
+                        <div class="circular-menu__text">serzhkonserzh@gmail.com</div>
+                    </div>
+                    <a href="https://vk.com/serzhkonserzh" class="circular-menu__item">VK</a>
+                    <div class="circular-menu__item">
+                        <div class="circular-menu__name">Phone</div>
+                        <div class="circular-menu__text">+375291479915</div>
+                    </div>
+                    <div class="circular-menu__btn">
+                        <span></span>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

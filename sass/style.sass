@@ -1,0 +1,517 @@
+$emerald: #009B77
+$black: #1d1d1d
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+a
+    text-decoration: none
+    color: #fff
+html
+    scroll-behavior: smooth
+body
+    width: 100%
+    position: relative
+    background: $black
+    color: #fff
+    font-family: 'roboto', sans-serif
+li
+    list-style: none
+// ========================================================= //
+.text-block
+    &__title
+        font-size: 4rem
+        text-transform: capitalize
+        font-weight: 500
+        span
+            color: $emerald
+    &__info
+        font-size: 1.25rem
+        line-height: 30px
+.separator
+    margin: 0 auto
+    margin-top: 20px
+    position: relative
+    width: 25%
+// ========================================================= //
+.circular-menu
+    margin: 0 auto
+    position: relative
+    width: 300px
+    height: 300px
+    &__item
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: $emerald
+        transition: 0.3s
+    &__text
+        display: none
+        position: absolute
+        padding: 10px
+        top: 27%
+        left: 100px
+        border-radius: 15px
+        background-color: $emerald
+        transition: 0.3s
+    &__item._active
+        .circular-menu__text
+            display: inline
+    &__btn
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: $emerald
+        &::before
+            content: "click me!"
+            position: absolute
+            font-size: 1.25rem
+            top: -30px
+            left: 100px
+        &::after
+            content: ""
+            width: 40px 
+            height: 2px
+            position: absolute
+            background-color: #fff
+            transform: rotate(-35deg)
+            top: 20px
+            left: 60px
+        span,
+        span::before,
+        span::after
+            position: absolute
+            width: 40px
+            height: 6px
+            background-color: #fff
+            transition: 0.3s
+        span
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: transparent
+        span::after
+            content: ''
+        span::before
+            content: ''
+            transform: rotate(90deg)
+    ._active
+        span::before
+            transform: rotate(45deg)
+        span::after
+            transform: rotate(-45deg)
+        &::before,
+        &::after
+            display: none
+    
+// ========================================================= //
+.container
+    margin: 0px auto
+    padding: 0 10vw
+.header    
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background: $black
+    z-index: 11
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        z-index: 10
+    &__logo
+        font-weight: 500
+        font-size: 2rem
+        span
+            color: $emerald
+.nav-header
+    &__list
+        display: flex
+    &__link
+        font-size: 1.25rem
+        text-transform: capitalize
+        color: #fff
+        margin: 0 10px
+        padding: 10px
+        position: relative
+        transition: 0.3s
+        &:hover:not(._active)
+            box-shadow: 0px 0px 10px $emerald
+            border-radius: 10px
+            background-color: $emerald
+.nav-header__link._active::before, .separator::before
+    content: ""
+    z-index: 3
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 5px
+    height: 5px
+    border-radius: 50%
+    background-color: #fff
+.nav-header__link._active::after, .separator::after
+    content: ""
+    z-index: 2
+    position: absolute
+    bottom: 2px
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $emerald
+.home
+    padding: 60px 0px 0px 0px
+    margin-top: 60px
+    width: 100%
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+    &__content
+        width: 50%
+    &__photo 
+        img
+            border-radius: 50% 10px 50% 10px
+            border: 5px solid $emerald
+            width: 400px
+    &__text-block
+        margin-bottom: 40px 
+        .text-block
+            &__title
+                font-size: 5rem
+                margin: 0px
+            &__profession
+                width: fit-content
+                display: block
+                margin: 10px 0 20px
+                margin-left: auto
+                text-transform: capitalize
+                position: relative
+                padding: 10px 20px
+                color: $black
+                z-index: 2
+            &__profession::before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: #e3e3e3
+                z-index: -1
+                transform: skew(20deg)
+            &__profession::after
+                content: ""
+                position: absolute
+                top: 0
+                left: -150px
+                width: 150px
+                height: 2px
+                background-color: #e3e3e3
+                z-index: -1
+    .text-block__btn
+        padding: 10px 20px
+        text-decoration: none
+        border-radius: 50px
+        background-color: $emerald
+        color: #fff
+        text-transform: capitalize
+        transition: 0.2s
+        border: none
+        &:hover
+            border: 2px solid $emerald
+            background-color: $black
+.about
+    padding: 60px 0px 0px 0px
+    margin-top: 140px
+    &__text-block
+        text-align: center
+    &__cards
+        margin-top: 100px
+        display: flex
+        justify-content: center
+        gap: 70px
+        .cards-about
+            &__item
+                cursor: default
+                flex: 0 1 25%
+                background-color: #151515
+                color: #fff
+                padding: 30px 10px
+                border-radius: 10px
+                border: 4px solid $emerald
+                text-align: center
+            &__title
+                font-size: 2rem
+            &__img
+                width: 150px
+                height: 150px
+                background-color: #fff
+                border-radius: 50%
+                border: 3px solid $emerald
+                margin: 20px auto
+                img
+                    transform: translateY(25%)
+                    max-width: 100px
+.skills
+    padding: 60px 0px 0px 0px
+    margin-top: 140px
+    &__title
+        text-align: center
+.list-skills
+    &__item
+        display: flex
+        justify-content: space-between
+        &:not(:last-child)
+            margin: 100px 0px
+    &__card
+        flex: 0 1 25%
+        cursor: default
+        height: 200px
+        border-radius: 10px
+        border: 1px solid #464646
+        text-align: center
+        position: relative
+        transition: 0.5s
+        font-size: 2rem
+        line-height: 200px
+        background: var(--bg)
+        box-shadow: 0px 0px 40px var(--bg)
+        opacity: 0.5
+        color: #fff
+        &:hover
+            opacity: 1
+    &__block
+        flex: 0 1 65%
+        padding: 20px 10px 0px 10px 
+    .skills-text-block__title
+        font-size: 3rem
+        margin-bottom: 20px
+.projects
+    padding: 60px 0px 0px 0px
+    margin-top: 140px
+    &__text-block
+        text-align: center
+    &__cards
+        margin-top: 100px
+        width: 100%
+        display: flex
+        justify-content: space-between
+    .cards-projects
+        &__item
+            border: 2px solid $emerald
+            border-radius: 12px
+            width: 350px
+            height: 350px
+            position: relative
+            display: block
+            cursor: pointer
+            &:hover
+                .cards-projects__info
+                    opacity: 1
+            img
+                width: 100%
+                border-radius: 10px
+        &__info
+            position: absolute
+            border-radius: 10px
+            top: 0 
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0,0.7)
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: 0.5s
+            text-transform: capitalize
+            opacity: 0
+        &__name
+            font-weight: 300
+            font-size: 2.5rem
+            text-align: center
+        &__tags
+            position: absolute
+            bottom: 20px
+            opacity: 0.6
+            width: 90%
+.contacts
+    padding: 60px 0px 0px 0px
+    margin-top: 140px
+    &__text-block
+        text-align: center
+    &__circular-menu
+        margin: 100px auto
+
+@media(max-width: 1439.98px)
+    .container 
+        padding: 0px 8vw    
+    .home
+        &__photo
+            img
+                width: 350px
+    .about
+        &__cards
+            gap: 50px
+            .cards-about
+                &__item
+                    flex: 0 1 30%
+    .projects
+        .cards-projects
+            &__item
+                width: 250px
+                height: 250px
+@media(max-width: 1023.98px)
+    html
+        font-size: 14px
+    .container
+        padding: 0px 6vw
+    .about,.skills,.projects,.contacts
+        margin-top: 80px
+    .nav-header
+        &__icon
+            position: absolute
+            width: 40px
+            height: 40px
+            right: 6vw
+            cursor: pointer
+            span
+                position: absolute
+                width: 100%
+                height: 2px
+                background-color: #fff
+                top: -25%
+                transition: 0.5s
+                &:nth-child(2)
+                    top: 15%
+        ._active
+            span
+                &:nth-child(1)
+                    top: 0%
+                    transform: rotate(45deg)
+                &:nth-child(2)   
+                    top: 0%
+                    transform: rotate(-45deg)
+        &__list
+            position: absolute
+            top: 60px
+            background-color: $black
+            width: 100%
+            left: 0
+            padding: 0 10vw
+            flex-direction: column
+            transition: 0.5s
+            opacity: 0
+            pointer-events: none
+        &__list._active
+            opacity: 1
+            pointer-events: all
+        &__link
+            margin-left: auto
+            text-align: center
+            display: block
+            height: 50px
+    .home
+        &__content
+            .text-block
+                &__title
+                    font-size: 4.5rem
+        &__photo
+            img
+                width: 250px  
+    .about
+        &__cards
+            gap: 20px 
+    .list-skills
+        &__block
+            padding: 0px
+        &__card
+            opacity: 0.8
+        .text-block
+            &__title
+                font-size: 2.25rem
+                margin-bottom: 10px
+    .projects
+        .cards-projects
+            &__item
+                width: 200px
+                height: 200px
+                .cards-projects__info
+                    opacity: 1
+@media(max-width: 767.98px)
+    html
+        font-size: 13px
+    .container
+        padding: 0px 4vw
+    .home
+        &__container
+            flex-direction: column-reverse
+        &__content
+            text-align: center
+            width: 80%
+        &__photo
+            img
+                width: 300px 
+                border-radius: 50% 50% 10px 10px
+        .text-block
+            &__profession
+                margin: 10px auto
+                &::before
+                    transform: skew(0deg)   
+                &::after
+                    display: none
+    .about
+        &__cards
+            gap: 40px
+            flex-direction: column
+            .cards-about
+                &__item
+                    margin: 0 auto
+                    width: 300px
+    .list-skills
+        &__item
+            flex-direction: column
+        &__card
+            margin: 0 auto
+            width: 50%
+            margin-bottom: 40px
+        &__block
+            text-align: center
+    .projects
+        .cards-projects
+            flex-direction: column
+            gap: 30px
+            &__item
+                width: 300px
+                height: 300px
+                margin: 0 auto
+    .contacts
+        padding: 60px 0px 0px 0px
+        margin-top: 140px
+        &__text-block
+            text-align: center
+        &__circular-menu
+            margin: 100px auto
+@media(max-width: 424.98px)
+    html
+        font-size: 12px
+    .list-skills
+        &__card
+            width: 80%
